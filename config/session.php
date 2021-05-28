@@ -19,7 +19,7 @@ return [
     */
 
     'driver' => env('SESSION_DRIVER', 'file'),
-
+    //'driver' => env('SESSION_DRIVER', 'database'),
     /*
     |--------------------------------------------------------------------------
     | Session Lifetime
@@ -155,8 +155,10 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
-    //  'domain' => '.example.ca',
+     //'domain' => env('SESSION_DOMAIN', null),
+     //'domain' => $_SERVER['SERVER_NAME'],
+    'domain' => env('SESSION_DOMAIN', '.laravel-sub-domain.com'),
+    //'domain' => '.laravel-sub-domain'
     /*
     |--------------------------------------------------------------------------
     | HTTPS Only Cookies
