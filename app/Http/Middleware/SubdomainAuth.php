@@ -16,9 +16,9 @@ class SubdomainAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        $user = Auth::user();
-        if ($user == null) {
-          return redirect('/login');
+        $user = auth()->user()->role;
+        if ($user == 'product2') {
+          return redirect('/home');
         }
         return $next($request);
     }

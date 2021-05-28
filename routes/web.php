@@ -29,7 +29,7 @@ Route::resource('request', RequestController::class);
 Route::resource('user', UserController::class);
 
 Route::domain('{subdomain}.'.config('app.short_url'))->group(function () {
-    Route::resource('products', 'Product1Controller');
-    Route::resource('tipes', 'TipesController');
+    Route::resource('products', 'Product1Controller')->middleware('sub_auth');
+    Route::resource('tipes', 'TipesController')->middleware('sub_auth');
 });
 
