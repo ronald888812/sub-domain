@@ -13,7 +13,7 @@
 1. change config < session -> domain for authentication
 2. change env -> APP_URL=http://laravel-sub-domain.com
 3. change to 'domain' => env('SESSION_DOMAIN', '.laravel-sub-domain.com'),
-
+4. change app -> providers -> RouteServiceProvider
 
 ## optional
 - create php artisan session:table
