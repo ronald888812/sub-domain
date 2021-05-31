@@ -8,12 +8,12 @@
   {{-- <div class="content-wrapper"> --}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Product 1
+        <h1>{{$subdomain}} 
             <small></small>
         </h1>
         <ol class="breadcrumb">
             {{-- <li><i class="fa fa-building"></i> Super Admin</li> --}}
-            <li><i class="fa fa-product-hunt"></i> Product 1 </li>
+            <li><i class="fa fa-product-hunt"></i>{{$subdomain}} </li>
         </ol>
     </section>
     <br>

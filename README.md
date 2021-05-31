@@ -9,7 +9,7 @@
 7. Run the application using "php artisan serve".
 
 
-##  create new !! 
+##  create new subdomain !! 
 1. change config < session -> domain for authentication
 2. change env -> APP_URL=http://laravel-sub-domain.com
 3. change to 'domain' => env('SESSION_DOMAIN', '.laravel-sub-domain.com'),
