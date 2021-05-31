@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', "BukuServis | Produk Bengkel" )
+@section('title', "Insert" )
 
 @section('content')
 

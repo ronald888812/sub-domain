@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', "BukuServis | Produk Bengkel" )
+@section('title', "Index" )
 
 @section('content')
 
@@ -21,7 +21,7 @@
         <section class="content container-fluid">
             <div class="form-group col-md-12">
                 <div class="pull-right">
-                    {{-- <a href="{{ route('request.create') }}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Domain</a> --}}
+                    <a href="{{ route('products.create', ['subdomain' => Auth::user()->role]) }}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Products</a>
                 </div>
             </div>
             <br>
@@ -41,20 +41,23 @@
                     <tr>
                         <th width="20">No</th>
                         <th>Nama </th>
+                        <th>Price </th>
+                        <th>Qty </th>
                         <th width="100">Tindakan</th>
                     </tr>
                     </thead>
-                    {{-- <tbody id="">
+                    <tbody id="">
                         @if (count($indexs) > 0)
                         @foreach ($indexs as $key => $index)
                             <tr>
                                 <td>{{ $key+1 }}</td>
                                 <td>{{ $index->nama }}</td>
-                                <td>{{ $index->role }}</td>
+                                <td>{{ $index->harga }}</td>
+                                <td>{{ $index->qty }}</td>
                                 <td>
                                 <center>
-                                   <a href="{{ route('request.edit',$index->id) }}"><button class="btn btn-primary btn-xs" title="Ubah"><i class="fas fa-pencil-alt"></i></button></a>
-                                    {{ Form::open(['method' => 'DELETE','route' => ['request.destroy', $index->id],'style'=>'display:inline']) }}
+                                   <a href="{{ route('products.edit',[$index->id ,'subdomain' => $subdomain]) }}"><button class="btn btn-primary btn-xs" title="Ubah"><i class="fas fa-pencil-alt"></i></button></a>
+                                    {{ Form::open(['method' => 'DELETE','route' => ['products.destroy', $index->id,'subdomain' => $subdomain],'style'=>'display:inline']) }}
                                     {{ csrf_field() }}
                                     <button class="btn btn-danger btn-xs" id="delete" onclick="return confirm('Hapus produk {{$index->name}} dibengkel ini ?')"><i class="fa fa-trash"></i></button>
                                     {{ Form::close() }}
@@ -64,10 +67,10 @@
                         @endforeach
                     @else
                         <tr>
-                            <td colspan="4">Produk Bengkel tidak ditemukan!</td>
+                            <td colspan="4">Produk tidak ditemukan!</td>
                         </tr>
                     @endif
-                </tbody> --}}
+                </tbody>
                 </table>
             </div>
         </div>

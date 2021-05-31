@@ -9,4 +9,5 @@ class Product extends Model
 {
     use HasFactory;
     protected $connection = 'mysql2';
+    protected $fillable =['nama','harga','qty'];
 }

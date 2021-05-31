@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', "ENT-Ticketing-BS | Super Admin - Produk - Tambah" )
+@section('title', "Edit |- Edit - User" )
 
 @section('content')
   <!-- Content Wrapper. Contains page content -->
