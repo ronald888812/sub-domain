@@ -42,7 +42,7 @@
                         <th width="20">No</th>
                         <th>{{ __('home.name') }} </th>
                         <th>Role </th>
-                        <th width="100">Tindakan</th>
+                        <th width="100">{{ __('home.action') }}</th>
                     </tr>
                     </thead>
                     <tbody id="">
