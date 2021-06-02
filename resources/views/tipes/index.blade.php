@@ -40,8 +40,8 @@
                     <thead>
                     <tr>
                         <th width="20">No</th>
-                        <th>Nama </th>
-                        <th width="100">Tindakan</th>
+                        <th>{{ __('home.name') }}  </th>
+                        <th width="100">{{ __('home.action') }} </th>
                     </tr>
                     </thead>
                     {{-- <tbody id="">
