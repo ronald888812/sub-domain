@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('nama');
             $table->string('qty')->nullable();
-            $table->string('harga')->nullable();;
+            $table->string('harga')->nullable();
             $table->timestamps();
         });
     }
