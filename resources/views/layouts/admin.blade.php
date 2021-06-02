@@ -63,11 +63,11 @@
                 </ul>
             </nav>
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
-                <a href="http://127.0.0.1:8000/home" class="brand-link ">
-                    <img src="http://127.0.0.1:8000/vendor/adminlte/dist/img/AdminLTELogo.png"
+                <a href="{{ route('request.index') }}" class="brand-link ">
+                    <img src="{{asset('vendor/adminlte/dist/img/AdminLTELogo.png"
                         alt="AdminLTE"
                         class="brand-image img-circle elevation-3"
-                        style="opacity:.8">
+                        style="opacity:.8')}}">
                         <span class="brand-text font-weight-light "><b>Admin</b>LTE</span>
                 </a>
                 <div class="sidebar">
@@ -105,10 +105,10 @@
                 @yield('content')
             </div>
         </div>
-        <script src="http://127.0.0.1:8000/vendor/jquery/jquery.min.js"></script>
-        <script src="http://127.0.0.1:8000/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="http://127.0.0.1:8000/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-        <script src="http://127.0.0.1:8000/vendor/adminlte/dist/js/adminlte.min.js"></script>
+        <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+        <script src="{{asset('vendor/adminlte/dist/js/adminlte.min.js')}}"></script>
         <script> console.log('Hi!'); </script>
 </body>
 </html>
