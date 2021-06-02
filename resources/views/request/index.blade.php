@@ -40,7 +40,7 @@
                     <thead>
                     <tr>
                         <th width="20">No</th>
-                        <th>Nama </th>
+                        <th>{{ __('home.name') }} </th>
                         <th>Role </th>
                         <th width="100">Tindakan</th>
                     </tr>
