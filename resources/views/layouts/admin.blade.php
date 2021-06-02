@@ -76,13 +76,13 @@
                             <li  class="nav-item">
                                 <a class="nav-link" href="{{ route('request.index') }}">
                                     <i class="far fa-fw fa-file "></i>
-                                    <p>Request</p>
+                                    <p>{{ __('home.request') }}</p>
                                 </a>
                             </li>
                             <li  class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}"
                                     <i class="fas fa-fw fa-user "></i>
-                                    <p>Profile</p>
+                                    <p>{{ __('home.profile') }}</p>
                                 </a>
                             </li>
                             <li class="nav-item">

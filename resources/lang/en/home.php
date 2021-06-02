@@ -14,4 +14,6 @@ return [
     'price' => 'price',
     'action' => 'action',
     'domain_product' => 'Domain Product',
+    'request' =>'Request',
+    'profile' =>'Profile',
 ];

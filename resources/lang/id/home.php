@@ -14,4 +14,6 @@ return [
     'price' => 'harga',
     'action' => 'tindakan',
     'domain_product' => 'Domain Produk',
+    'request' =>'Permintaan',
+    'profile' =>'Profil',
 ];
