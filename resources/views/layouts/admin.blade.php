@@ -97,7 +97,6 @@
                                     <p>Domain Tipe </p>
                                 </a>
                             </li>
-                             <li class="nav-header ">ACCOUNT SETTINGS</li>
                         </ul>
                     </nav>
                 </div>
