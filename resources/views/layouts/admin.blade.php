@@ -88,7 +88,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('products.index', ['subdomain' => Auth::user()->role]) }}"
                                     <i class="fas fa-fw fa-user"></i>
-                                    <p>Domain Product</p>
+                                    <p>{{ __('home.domain_product') }} </p>
                                 </a>
                             </li>
                             <li class="nav-item">

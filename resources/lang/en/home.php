@@ -13,4 +13,5 @@ return [
     'qty' => 'qty',
     'price' => 'price',
     'action' => 'action',
+    'domain_product' => 'Domain Product',
 ];

@@ -42,7 +42,7 @@
                         <th width="20">No</th>
                         <th>{{ __('home.name') }}</th>
                         <th>{{ __('home.price') }} </th>
-                        <th>{{ __('home.qty') }}  </th>
+                        <th>{{ __('home.action') }}  </th>
                         <th width="100">{{ __('home.action') }} </th>
                     </tr>
                     </thead>

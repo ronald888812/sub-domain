@@ -13,4 +13,5 @@ return [
     'qty' => 'qty',
     'price' => 'harga',
     'action' => 'tindakan',
+    'domain_product' => 'Domain Produk',
 ];
