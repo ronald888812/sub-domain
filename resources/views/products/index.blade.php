@@ -40,10 +40,10 @@
                     <thead>
                     <tr>
                         <th width="20">No</th>
-                        <th>Nama </th>
-                        <th>Price </th>
-                        <th>Qty </th>
-                        <th width="100">Tindakan</th>
+                        <th>{{ __('home.name') }}</th>
+                        <th>{{ __('home.price') }} </th>
+                        <th>{{ __('home.qty') }}  </th>
+                        <th width="100">{{ __('home.action') }} </th>
                     </tr>
                     </thead>
                     <tbody id="">
