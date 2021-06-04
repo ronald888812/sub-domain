@@ -36,19 +36,20 @@
             <!-- Horizontal Form -->
             <div class="box box-info">
             <div class="box-body table-responsive">
+                    @if (count($indexs) > 0)
+                        @foreach ($indexs as $key => $index)
                 <table id="listProdukToko" class="table table-bordered table-stripped responsive">
                     <thead>
                     <tr>
                         <th width="20">No</th>
-                        <th>{{ __('home.name') }}</th>
+                        <th>{{ $index}}</th>
                         <th>{{ __('home.price') }} </th>
                         <th>{{ __('home.qty') }}  </th>
                         <th width="100">{{ __('home.action') }} </th>
                     </tr>
                     </thead>
                     <tbody id="">
-                        @if (count($indexs) > 0)
-                        @foreach ($indexs as $key => $index)
+                    
                             <tr>
                                 <td>{{ $key+1 }}</td>
                                 <td>{{ $index->nama }}</td>

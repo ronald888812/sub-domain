@@ -4,15 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Product;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Session;
+use App\Traits\MultiLanguage;
 class Product1Controller extends Controller
 {
+    use MultiLanguage;
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index($subdomain)
-    {
+    {    
+  
+        //$multi= $this->__get();
         $indexs=Product::all();
         return view("products.index",compact('indexs','subdomain'));
     }

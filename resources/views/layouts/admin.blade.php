@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="{{asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/adminlte/dist/css/adminlte.min.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <link rel="stylesheet" href="/css/admin_custom.css">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
+ 
 </head>
 <body class="sidebar-mini" >
         <div class="wrapper">    
@@ -28,7 +27,7 @@
           
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
+                    {{-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{ __('home.switch_language') }}
@@ -37,7 +36,38 @@
                             <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}" href="{{ route('localization.switch', 'en') }}">English</a>
                             <a class="dropdown-item {{ app()->getLocale() == 'id' ? 'active' : '' }}" href="{{ route('localization.switch', 'id') }}">Bahasa Indonesia</a>
                         </div>
+                    </li> --}}
+
+
+                    <li class = "nav-item dropdown" id = "nav-lang">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            {{Config::get('languages') [App::getLocale()]}}
+                            <span class = "caret"></span>
+                        </a>
+                        <ul class = "dropdown-menu">
+                            @foreach ((array) Config::get ('languages') as $lang => $language)
+                            @if ($lang != App::getLocale())
+                                <li>
+                                    <a href="{{route('lang.switch', $language)}} "> {{$language}} </a>
+                                </li>
+                            @endif
+                            @endforeach
+                        </ul>
                     </li>
+                    {{-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {{ Config::get('languages')[App::getLocale()] }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            @foreach (Config::get('languages') as $lang => $language)
+                                @if ($lang != App::getLocale())
+                                    <li>
+                                        <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                                    </li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </li> --}}
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown user-menu">

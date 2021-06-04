@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClientRequestsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateClientRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_requests', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('title_id');
+            $table->string('title_en');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateClientRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_requests');
+        Schema::dropIfExists('categories');
     }
 }
