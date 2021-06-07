@@ -22,7 +22,9 @@ use App\Http\Controllers\LanguageController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses'=>'LanguageController@switchLang']);
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -31,11 +33,8 @@ Route::resource('request', RequestController::class);
 Route::resource('user', UserController::class);
 
 Route::domain('{subdomain}.'.config('app.short_url'))->group(function () {
+
     Route::resource('products', 'Product1Controller')->middleware('sub_auth');
     Route::resource('tipes', 'TipesController')->middleware('sub_auth');
 });
-Route::group(['middleware' => ['web']], function () {
-	Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses'=>'LanguageController@switchLang']);
-});
-//Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController','switchLang']);
-// Route::get('lang/{language}', [App\Http\Controllers\LocalizationController::class,'switch'])->name('localization.switch');
+

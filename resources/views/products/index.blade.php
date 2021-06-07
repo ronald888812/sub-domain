@@ -17,6 +17,7 @@
         </ol>
     </section>
     <br>
+
      <!-- Main content -->
         <section class="content container-fluid">
             <div class="form-group col-md-12">
@@ -36,48 +37,48 @@
             <!-- Horizontal Form -->
             <div class="box box-info">
             <div class="box-body table-responsive">
-                    @if (count($indexs) > 0)
-                        @foreach ($indexs as $key => $index)
+          
+
                 <table id="listProdukToko" class="table table-bordered table-stripped responsive">
                     <thead>
-                    <tr>
-                        <th width="20">No</th>
-                        <th>{{ $index}}</th>
-                        <th>{{ __('home.price') }} </th>
-                        <th>{{ __('home.qty') }}  </th>
-                        <th width="100">{{ __('home.action') }} </th>
-                    </tr>
+                        <tr>
+                            <th width="20">No</th>
+                            <th>name</th>
+                            <th>{{ __('home.price') }} </th>
+                            <th>{{ __('home.qty') }}  </th>
+                            <th width="100">{{ __('home.action') }} </th>
+                        </tr>
                     </thead>
+                @if (count($indexs) > 0)
+                @foreach ($indexs as $key => $index)
                     <tbody id="">
                     
-                            <tr>
-                                <td>{{ $key+1 }}</td>
-                                <td>{{ $index->nama }}</td>
-                                <td>{{ $index->harga }}</td>
-                                <td>{{ $index->qty }}</td>
-                                <td>
-                                <center>
-                                   <a href="{{ route('products.edit',[$index->id ,'subdomain' => $subdomain]) }}"><button class="btn btn-primary btn-xs" title="Ubah"><i class="fas fa-pencil-alt"></i></button></a>
-                                    {{ Form::open(['method' => 'DELETE','route' => ['products.destroy', $index->id,'subdomain' => $subdomain],'style'=>'display:inline']) }}
-                                    {{ csrf_field() }}
-                                    <button class="btn btn-danger btn-xs" id="delete" onclick="return confirm('Hapus produk {{$index->name}} dibengkel ini ?')"><i class="fa fa-trash"></i></button>
-                                    {{ Form::close() }}
-                                </center>
-                                </td>
-                            </tr>
-                        @endforeach
-                    @else
                         <tr>
-                            <td colspan="4">Produk tidak ditemukan!</td>
+                            <td>{{ $key+1 }}</td>
+                            <td>{{ $index->nama }}</td>
+                            <td>{{ $index->harga }}</td>
+                            <td>{{ $index->qty }}</td>
+                            <td>
+                            <center>
+                                <a href="{{ route('products.edit',[$index->id ,'subdomain' => $subdomain]) }}"><button class="btn btn-primary btn-xs" title="Ubah"><i class="fas fa-pencil-alt"></i></button></a>
+                                {{ Form::open(['method' => 'DELETE','route' => ['products.destroy', $index->id,'subdomain' => $subdomain],'style'=>'display:inline']) }}
+                                {{ csrf_field() }}
+                                <button class="btn btn-danger btn-xs" id="delete" onclick="return confirm('Hapus produk {{$index->name}} dibengkel ini ?')"><i class="fa fa-trash"></i></button>
+                                {{ Form::close() }}
+                            </center>
+                            </td>
                         </tr>
-                    @endif
-                </tbody>
-                </table>
+                @endforeach
+            @else
+                <tr>
+                    <td colspan="4">Produk tidak ditemukan!</td>
+                </tr>
+            @endif
+            </tbody>
+            </table>
             </div>
         </div>
-
-        </section>
-
+    </section>
     <!-- /.content -->
   {{-- </div> --}}
   <!-- /.content-wrapper -->

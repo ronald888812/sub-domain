@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{str_replace('_', '-', app()->getLocale())}}">
 <head>    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +48,7 @@
                             @foreach ((array) Config::get ('languages') as $lang => $language)
                             @if ($lang != App::getLocale())
                                 <li>
-                                    <a href="{{route('lang.switch', $language)}} "> {{$language}} </a>
+                                    <a href="{{route('lang.switch', $lang)}} "> {{$language}} </a>
                                 </li>
                             @endif
                             @endforeach

@@ -10,8 +10,9 @@ class Category extends Model
 {
     use HasFactory;
     use MultiLanguage;
+    
     protected $fillable = [
-            'title_en', 'title_id',
+        'title_en', 'title_id',
     ];
     /**
      * This array will have the attributes which you want it to support multi languages

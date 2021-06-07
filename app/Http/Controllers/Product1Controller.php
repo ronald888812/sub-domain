@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Product;
+use App\models\Category;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 use App\Traits\MultiLanguage;
@@ -21,7 +22,9 @@ class Product1Controller extends Controller
   
         //$multi= $this->__get();
         $indexs=Product::all();
-        return view("products.index",compact('indexs','subdomain'));
+
+        $categories = Category::all();
+        return view("products.index",compact('indexs','subdomain','categories'));
     }
 
     /**
