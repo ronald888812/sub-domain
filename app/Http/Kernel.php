@@ -21,7 +21,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \Illuminate\Session\Middleware\StartSession::class, // Karena kita menggunakan Session, maka tambahkan Middleware ini
+        //\Illuminate\Session\Middleware\StartSession::class, // Karena kita menggunakan Session, maka tambahkan Middleware ini
         //\App\Http\Middleware\LocalizationMiddleware::class, // Middleware untuk Cek Bahasa
         \App\Http\Middleware\LangMiddleware::class,
         // \App\Http\Middleware\MultisiteMiddleware::class,

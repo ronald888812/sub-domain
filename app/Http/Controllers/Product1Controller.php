@@ -46,7 +46,7 @@ class Product1Controller extends Controller
     public function store(Request $request)
     {
         Product::create($request->all());
-        return redirect()->route('products.index',['subdomain' => 'product1']);
+        return redirect()->route('products.index',['subdomain' => 'product1'])->with('success','Produk insert successfully.');
     }
 
     /**
