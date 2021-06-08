@@ -100,12 +100,12 @@
                 <div class="sidebar">
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-                            <li  class="nav-item">
+                            {{-- <li  class="nav-item">
                                 <a class="nav-link" href="{{ route('request.index') }}">
                                     <i class="far fa-fw fa-file "></i>
                                     <p>{{ __('home.request') }}</p>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li  class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">
                                     <i class="fas fa-fw fa-user "></i>
