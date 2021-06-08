@@ -107,19 +107,19 @@
                                 </a>
                             </li>
                             <li  class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}"
+                                <a class="nav-link" href="{{ route('user.index') }}">
                                     <i class="fas fa-fw fa-user "></i>
                                     <p>{{ __('home.profile') }}</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('products.index', ['subdomain' => Auth::user()->role]) }}"
+                                <a class="nav-link" href="{{ route('products.index', ['subdomain' => Auth::user()->role]) }}">
                                     <i class="fas fa-fw fa-user"></i>
                                     <p>{{ __('home.domain_product') }} </p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('tipes.index', ['subdomain' => Auth::user()->role]) }}"
+                                <a class="nav-link" href="{{ route('tipes.index', ['subdomain' => Auth::user()->role]) }}">
                                     <i class="fas fa-fw fa-user"></i>
                                     <p>Domain Tipe </p>
                                 </a>
