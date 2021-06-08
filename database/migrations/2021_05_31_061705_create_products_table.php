@@ -15,9 +15,10 @@ class CreateProductsTable extends Migration
     {
         Schema::connection('mysql2')->create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('qty')->nullable();
-            $table->string('harga')->nullable();
+            $table->string('title_id');
+            $table->string('title_en');
+            $table->string('desc_en')->nullable();
+            $table->string('desc_id')->nullable();
             $table->timestamps();
         });
     }

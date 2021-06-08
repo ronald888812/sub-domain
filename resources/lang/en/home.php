@@ -9,10 +9,11 @@ return [
     |
     */
     'switch_language' => 'Switch Language',
-    'name' => 'name',
+    'name' => 'Name',
+    'description' => 'Description',
     'qty' => 'qty',
     'price' => 'price',
-    'action' => 'action',
+    'action' => 'Action',
     'domain_product' => 'Domain Product',
     'request' =>'Request',
     'profile' =>'Profile',

@@ -21,32 +21,42 @@
     <section class="content container-fluid">
         <div class="panel-body">
          {!! Form::model($editProduct, ['method' => 'PATCH','route' => ['products.update', $editProduct->id,'subdomain' => $subdomain], 'class' => 'form-horizontal']) !!}
-            <div class="form-group @if ($errors->has('nama')) has-error @endif">
-                <label for="product" class="col-md-3">name</label>
-                <div class="col-md-9">
-                    <input type="text" name="nama" class="form-control" value="{{$editProduct->nama}}">
-                    @if ($errors->has('nama'))
-                        <div class="text-red">{{ $errors->first('nama')}}</div>
-                    @endif
-                </div>
+            
+            <div class="form-group @if ($errors->has('title_id')) has-error @endif">
+            <label for="title_id" class="col-md-3">Title ID</label>
+              <div class="col-md-9">
+              <input type="text" name="title_id" class="form-control" value="{{$editProduct->title_id}}">
+                  @if ($errors->has('title_id'))
+                      <div class="text-red">{{ $errors->first('title_id') }}</div>
+                  @endif
+              </div>
             </div>
-            <div class="form-group @if ($errors->has('qty')) has-error @endif">
-                <label for="product" class="col-md-3">qty</label>
-                <div class="col-md-9">
-                    <input type="text" name="qty" class="form-control" value="{{$editProduct->qty}}">
-                    @if ($errors->has('qty'))
-                        <div class="text-red">{{ $errors->first('qty')}}</div>
-                    @endif
-                </div>
+            <div class="form-group @if ($errors->has('title_en')) has-error @endif">
+            <label for="title_en" class="col-md-3">Title EN</label>
+              <div class="col-md-9">
+              <input type="text" name="title_en" class="form-control" value="{{$editProduct->title_en}}">
+                  @if ($errors->has('title_en'))
+                      <div class="text-red">{{ $errors->first('title_en') }}</div>
+                  @endif
+              </div>
             </div>
-            <div class="form-group @if ($errors->has('harga')) has-error @endif">
-                <label for="product" class="col-md-3">harga</label>
-                <div class="col-md-9">
-                    <input type="text" name="harga" class="form-control" value="{{$editProduct->harga}}">
-                    @if ($errors->has('harga'))
-                        <div class="text-red">{{ $errors->first('harga')}}</div>
-                    @endif
-                </div>
+            <div class="form-group @if ($errors->has('desc_id')) has-error @endif">
+            <label for="desc_id" class="col-md-3">Desc ID</label>
+              <div class="col-md-9">
+              <input type="text" name="desc_id" class="form-control" value="{{$editProduct->desc_id}}">
+                  @if ($errors->has('desc_id'))
+                      <div class="text-red">{{ $errors->first('desc_id') }}</div>
+                  @endif
+              </div>
+            </div>
+            <div class="form-group @if ($errors->has('desc_en')) has-error @endif">
+            <label for="desc_en" class="col-md-3">Desc EN</label>
+              <div class="col-md-9">
+              <input type="text" name="desc_en" class="form-control" value="{{$editProduct->desc_en}}">
+                  @if ($errors->has('desc_en'))
+                      <div class="text-red">{{ $errors->first('desc_en') }}</div>
+                  @endif
+              </div>
             </div>
             <div class="form-group">
             <center>

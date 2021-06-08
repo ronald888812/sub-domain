@@ -9,10 +9,11 @@ return [
     |
     */
     'switch_language' => 'Pindah Bahasa',
-    'name' => 'nama',
+    'name' => 'Nama',
+    'description' => 'Deskripsi',
     'qty' => 'qty',
     'price' => 'harga',
-    'action' => 'tindakan',
+    'action' => 'Tindakan',
     'domain_product' => 'Domain Produk',
     'request' =>'Permintaan',
     'profile' =>'Profil',

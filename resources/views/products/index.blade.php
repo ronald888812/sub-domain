@@ -43,9 +43,8 @@
                     <thead>
                         <tr>
                             <th width="20">No</th>
-                            <th>name</th>
-                            <th>{{ __('home.price') }} </th>
-                            <th>{{ __('home.qty') }}  </th>
+                            <th>{{ __('home.name') }} </th> 
+                            <th>{{ __('home.description') }} </th>
                             <th width="100">{{ __('home.action') }} </th>
                         </tr>
                     </thead>
@@ -55,9 +54,8 @@
                     
                         <tr>
                             <td>{{ $key+1 }}</td>
-                            <td>{{ $index->nama }}</td>
-                            <td>{{ $index->harga }}</td>
-                            <td>{{ $index->qty }}</td>
+                            <td>{{ $index->title }}</td>
+                            <td>{{ $index->desc }}</td>
                             <td>
                             <center>
                                 <a href="{{ route('products.edit',[$index->id ,'subdomain' => $subdomain]) }}"><button class="btn btn-primary btn-xs" title="Ubah"><i class="fas fa-pencil-alt"></i></button></a>

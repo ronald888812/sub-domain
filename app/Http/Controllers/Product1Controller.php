@@ -81,7 +81,7 @@ class Product1Controller extends Controller
      */
     public function update(Request $request, $subdomain, $id)
     {
-        Product::where('id',$id)->update(['nama' => $request->nama, 'qty'=>$request->qty,'harga'=>$request->harga]);
+        Product::where('id',$id)->update(['title_en' => $request->title_en, 'title_id'=>$request->title_id,'desc_id'=>$request->desc_id,'desc_en'=>$request->desc_en]);
         return redirect()->route('products.index',['subdomain' => $subdomain])->with('success', "Products berhasil diubah!");
     }
 
