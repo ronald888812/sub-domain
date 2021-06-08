@@ -17,4 +17,5 @@ return [
     'domain_product' => 'Domain Product',
     'request' =>'Request',
     'profile' =>'Profile',
+    'role' => 'Role'
 ];
