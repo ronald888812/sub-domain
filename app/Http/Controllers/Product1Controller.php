@@ -8,6 +8,8 @@ use App\models\Category;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Session;
 use App\Traits\MultiLanguage;
+use Stevebauman\Location\Facades\Location;
+use Stevebauman\Location\Facades\Location as FacadesLocation;
 class Product1Controller extends Controller
 {
     use MultiLanguage;
@@ -17,14 +19,20 @@ class Product1Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($subdomain)
-    {    
-  
-        //$multi= $this->__get();
-        $indexs=Product::all();
 
+    public function index($subdomain, Request $request)
+    {
+        if ($position = Location::get()) {
+            echo $position->ip; 
+            echo $position->countryName;
+            echo $position->regionName;
+            echo $position->regionCode;
+        } else {
+            echo "Can't fetch!";
+        }    
+        $indexs=Product::all();
         $categories = Category::all();
-        return view("products.index",compact('indexs','subdomain','categories'));
+        return view("products.index",compact('indexs','subdomain'));
     }
 
     /**

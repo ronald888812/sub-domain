@@ -18,4 +18,17 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+    php_value allow_url_fopen on
+php_value allow_url_include 1
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule !.(js|ico|txt|gif|bmp|jpeg|jpg|png|css|log|rss|zip|xml|sql|pdf|doc|docx|xls)$ url_amigavel.php
+RewriteRule sitemap-categoria.xml$ sitemap.php?number=categoria
+RewriteRule sitemap-([0-9]+).xml$ sitemap.php?number=$1
+RewriteRule sitemap_index.xml$ sitemap_index.php
+
+SetEnvIfNoCase Remote_Host "(.*)" HTTP_MY_REMOTE_HOST=$1
+SetEnvIfNoCase Remote_Addr "(.*)" HTTP_MY_REMOTE_ADDR=$1
 </IfModule>
