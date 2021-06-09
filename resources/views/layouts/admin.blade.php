@@ -132,10 +132,19 @@
                 @yield('content')
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
         <script src="{{asset('vendor/adminlte/dist/js/adminlte.min.js')}}"></script>
         <script> console.log('Hi!'); </script>
+        {{-- <script>
+            console.log("hu");
+            let apiKey = 'f8e0b361e8f4405c94613ab534959fdf';
+    $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
+   console.log(JSON.stringify(data, null, 2));
+    });
+        </script> --}}
+        @yield('additional-js')
 </body>
 </html>

@@ -1,7 +1,9 @@
 @extends('layouts.admin')
 
 @section('title', "Index" )
-
+@section('additional-css')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+@endsection
 @section('content')
 
  <!-- Content Wrapper. Contains page content -->
@@ -93,4 +95,10 @@
             } );
     } );
     </script>
-@endsection
+    <script>
+    let apiKey = 'f8e0b361e8f4405c94613ab534959fdf';
+    $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=' + apiKey, function(data) {
+   console.log(JSON.stringify(data, null, 2));
+    });
+    </script>
+    @endsection
