@@ -170,6 +170,7 @@ return [
         /*
          * Application Service Providers...
          */
+        Stevebauman\Location\LocationServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -190,7 +191,7 @@ return [
     */
 
     'aliases' => [
-
+        'Location' => 'Stevebauman\Location\Facades\Location',
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
