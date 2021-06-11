@@ -22,7 +22,6 @@ class Product1Controller extends Controller
   
         //$multi= $this->__get();
         $indexs=Product::all();
-
         $categories = Category::all();
         return view("products.index",compact('indexs','subdomain','categories'));
     }

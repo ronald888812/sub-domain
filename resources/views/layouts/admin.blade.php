@@ -10,9 +10,17 @@
     <link rel="stylesheet" href="{{asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/adminlte/dist/css/adminlte.min.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
  
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/datatables.min.js"></script>
+    @yield('additional-css')
+    <!-- Font Awesome -->
+
 </head>
 <body class="sidebar-mini" >
         <div class="wrapper">    
@@ -137,5 +145,6 @@
         <script src="{{asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
         <script src="{{asset('vendor/adminlte/dist/js/adminlte.min.js')}}"></script>
         <script> console.log('Hi!'); </script>
+        @yield('additional-js')
 </body>
 </html>
