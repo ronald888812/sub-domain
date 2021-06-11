@@ -35,35 +35,6 @@
           
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    {{-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ __('home.switch_language') }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item {{ app()->getLocale() == 'en' ? 'active' : '' }}" href="{{ route('localization.switch', 'en') }}">English</a>
-                            <a class="dropdown-item {{ app()->getLocale() == 'id' ? 'active' : '' }}" href="{{ route('localization.switch', 'id') }}">Bahasa Indonesia</a>
-                        </div>
-                    </li> --}}
-
-
-                    
-                    {{-- <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            {{ Config::get('languages')[App::getLocale()] }}
-                        </a>
-                        <ul class="dropdown-menu">
-                            @foreach (Config::get('languages') as $lang => $language)
-                                @if ($lang != App::getLocale())
-                                    <li>
-                                        <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
-                                    </li>
-                                @endif
-                            @endforeach
-                        </ul>
-                    </li> --}}
-                </ul>
-                <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown user-menu">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                             <span>
