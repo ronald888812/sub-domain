@@ -1,11 +1,7 @@
 @extends('layouts.admin')
 
 @section('title', "Index" )
-@section('additional-css')
-<script type="text/css" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
-<script type="text/css" src="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css"></script>
-<script type="text/css" src="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css"></script>
-@endsection
+
 @section('content')
 
  <!-- Content Wrapper. Contains page content -->
@@ -41,7 +37,7 @@
             <!-- Horizontal Form -->
             <div class="box box-info">
             <div class="box-body table-responsive">
-                <table id="listProdukToko" class="table table-bordered table-stripped responsive">
+                <table id="listProdukToko" class="table table-striped table-bordered nowrap">
                     <thead>
                         <tr>
                             <th width="20">No</th>
