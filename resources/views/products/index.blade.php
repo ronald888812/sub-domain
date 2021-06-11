@@ -38,6 +38,7 @@
             <div class="box box-info">
             <div class="box-body table-responsive">
                 <table id="listProdukToko" class="table table-striped table-bordered nowrap">
+                    
                     <thead>
                         <tr>
                             <th width="20">No</th>
@@ -80,13 +81,6 @@
 @endsection
 
 @section('additional-js')
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script  type="text/javascript"src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
     $('#listProdukToko').DataTable( {
